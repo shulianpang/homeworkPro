@@ -4,7 +4,7 @@ import yaml
 
 
 def get_datas():
-    with open('cal_data.yaml') as f:
+    with open('./calculator_test/cal_data.yaml') as f:
         datas = yaml.safe_load(f)
         add_datas = datas["add_datas"]
         sub_datas = datas["sub_datas"]
@@ -43,3 +43,6 @@ class TestCode:
     @pytest.mark.parametrize("a,b,expect", get_datas()[3], ids=get_datas()[4])
     def test_div(self, a, b, expect):
         assert self.cal.div(a, b) == expect
+
+if __name__ == '__main__':
+    pytest.main(['test_cal.py','-sv','--alluredir=../allure_report/xml'])
