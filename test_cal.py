@@ -4,7 +4,7 @@ import yaml
 
 
 def get_datas():
-    with open('./test_code.yaml') as f:
+    with open('cal_data.yaml') as f:
         datas = yaml.safe_load(f)
         add_datas = datas["add_datas"]
         sub_datas = datas["sub_datas"]
