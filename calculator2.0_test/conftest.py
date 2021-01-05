@@ -14,7 +14,7 @@ with open(yaml_file_path) as f:
     ids = datas["myids"]
 
 
-@pytest.fixture(params=add_datas, ids=ids)
+@pytest.fixture(params=add_datas, ids=ids,scope='module')
 def get_add_datas(request):
     print('\n开始加法计算')
     data = request.param
@@ -23,7 +23,7 @@ def get_add_datas(request):
     print('\n加法计算结束')
 
 
-@pytest.fixture(params=sub_datas, ids=ids)
+@pytest.fixture(params=sub_datas, ids=ids,scope='module')
 def get_sub_datas(request):
     print('\n开始减法计算')
     data = request.param
@@ -31,7 +31,7 @@ def get_sub_datas(request):
     print('\n减法计算结束')
 
 
-@pytest.fixture(params=mul_datas, ids=ids)
+@pytest.fixture(params=mul_datas, ids=ids,scope='module')
 def get_mul_datas(request):
     print('\n开始乘法计算')
     data = request.param
@@ -39,7 +39,7 @@ def get_mul_datas(request):
     print('\n乘法计算结束')
 
 
-@pytest.fixture(params=div_datas, ids=ids)
+@pytest.fixture(params=div_datas, ids=ids,scope='module')
 def get_div_datas(request):
     print('\n开始除法计算')
     data = request.param
