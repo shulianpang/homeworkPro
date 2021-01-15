@@ -18,15 +18,3 @@ class TestAddMember():
     def test_add_member(self):
         result = self.main.goto_contact().add_menber().get_list()
         assert "name" in result
-
-        # self.driver.get("https://work.weixin.qq.com/")
-        # with open("../page/cookies.json","r") as f:
-        #     cookies = json.load(f)
-        #
-        # for cookie in cookies:
-        #     self.driver.add_cookie(cookie)
-        #
-        # self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
-        # sleep(3)
-        # self.driver.find_element(By.XPATH, "//*[@id='menu_contacts']").click()
-        # sleep(2)
