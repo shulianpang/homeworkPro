@@ -2,6 +2,7 @@ from appium.webdriver.common.mobileby import MobileBy
 
 from appium_test2.page.base_page import BasePage
 from appium_test2.page.contactedit_page import ContactEditPage
+import test_requests
 
 
 class MemberInbitePage(BasePage):
